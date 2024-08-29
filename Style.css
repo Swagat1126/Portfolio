@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,18 +8,17 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px for easier scaling */
+    font-size: 62.5%;
 }
 
 body {
     width: 100%;
     height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden;
     background-color: black;
     color: white;
 }
 
-/* Header Styles */
 header {
     position: fixed;
     top: 0;
@@ -30,9 +28,9 @@ header {
     background-color: transparent;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5));
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;
+    justify-content: space-between;
     z-index: 100;
+
 }
 
 header .container {
@@ -40,7 +38,7 @@ header .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Control the maximum width of the header content */
+    max-width: 1200px;
 }
 
 .logo {
@@ -56,7 +54,7 @@ header .container {
 
 nav {
     display: flex;
-    align-items: center;
+    align-items:flex-end;
 }
 
 nav a {
@@ -74,16 +72,15 @@ nav a.active {
     border-bottom: 3px solid #b74b4b;
 }
 
-/* Responsive Header for Smaller Screens */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column; /* Stack logo and nav vertically */
-        align-items: center; /* Center items */
+        flex-direction: column;
+        align-items: center;
         padding: 1rem 2%;
     }
 
     .logo {
-        margin-bottom: 1rem; /* Space between logo and nav */
+        margin-bottom: 1rem;
     }
 
     nav {
@@ -94,7 +91,7 @@ nav a.active {
         border-left: 3px solid #b74b4b;
         border-bottom: 3px solid #b74b4b;
         background-color: #161616;
-        display: none; /* Hide by default */
+        display: none;
         flex-direction: column;
         align-items: center;
         border-top-left-radius: 2rem;
@@ -102,7 +99,7 @@ nav a.active {
     }
 
     nav.active {
-        display: flex; /* Show when active */
+        display: flex;
     }
 
     nav a {
@@ -111,7 +108,6 @@ nav a.active {
     }
 }
 
-/* Section Styles */
 section {
     min-height: 100vh;
     padding: 5vh 5%;
@@ -127,14 +123,13 @@ section {
     z-index: 10;
 }
 
-/* Home Image Styles */
 .home-img {
-    margin-bottom: 3rem; /* Increased margin to provide more space below the image */
+    margin-bottom: 3rem;
 }
 
 .home-img img {
     width: 50vw;
-    max-width: 30vh; /* Reduced max-width for smaller images */
+    max-width: 30vh;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
@@ -144,19 +139,17 @@ section {
     transform: scale(1.1);
 }
 
-/* Home Content Styles */
 .home-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-/* Typing Text Animation */
 .typing-text {
     font-size: 0.5rem;
     position: relative;
-    overflow: visible; /* Ensure text doesn't overflow its container */
+    overflow: visible;
     z-index: 20;
-    margin-bottom: 2rem; /* Space between from bottom elements */
+    margin-bottom: 2rem;
 }
 
 .typing-text span {
@@ -176,14 +169,13 @@ section {
     content: "";
     background-color: black;
     position: absolute;
-    width: 0.1em; /* Width of the cursor */
+    width: 0.1em;
     height: 100%;
     border-left: 3px solid #b74b4b;
     right: 0;
     animation: cursor 0.6s infinite;
 }
 
-/* Keyframes for Animation */
 @keyframes cursor {
     0%, 100% {
         border-left-color: transparent;
@@ -211,21 +203,21 @@ section {
     }
 }
 
-/* Icons Styles */
 .icons {
-    position: absolute; /* Ensure positioning context */
-    z-index: 15; /* Ensure icons are above other content but below the typing-text */
-    margin-top: 2rem; /* Space between icons and typing text */
+    position: absolute;
+    z-index: 15;
+    margin-top: 2rem;
     display: flex;
-    justify-content: center; /* Center icons horizontally */
-    width: 100%; /* Ensure icons take up full width for centering */
+    justify-content: center;
+    width: 100%;
+    transform: translateX(-10px);
 }
 
 .icons a {
     width: 3rem;
     height: 3rem;
     font-size: 1.5rem;
-    margin: 0 1rem; /* Center icons with equal spacing */
+    margin: 0 1rem;
     background-color: transparent;
     border: 0.2rem solid #b74b4b;
     border-radius: 50%;
@@ -240,7 +232,6 @@ section {
     box-shadow: 0 0 22px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Styles for Tablets and Laptops */
 @media (max-width: 1024px) {
     header {
         padding: 1rem 3%;
@@ -255,12 +246,12 @@ section {
     }
 
     .home-img {
-        margin-bottom: 2.5rem; /* Adjust margin for tablets and laptops */
+        margin-bottom: 2.5rem;
     }
 
     .home-img img {
         width: 60vw;
-        max-width: 200px; /* Further reduce max-width on tablets and laptops */
+        max-width: 200px;
     }
 
     .home-content h1 {
@@ -272,11 +263,10 @@ section {
     }
 
     .icons {
-        margin-top: 1rem; /* Adjust spacing for tablets and laptops */
+        margin-top: 1rem;
     }
 }
 
-/* Responsive Styles for Small Screens */
 @media (max-width: 480px) {
     .logo {
         font-size: 2rem;
@@ -291,12 +281,12 @@ section {
     }
 
     .home-img {
-        margin-bottom: 4rem; /* Further increase margin for small screens */
+        margin-bottom: 4rem;
     }
 
     .home-img img {
         width: 80vw;
-        max-width: 180px; /* Further reduce max-width on small screens */
+        max-width: 180px;
     }
 
     .home-content h1 {
